@@ -12,9 +12,9 @@ import static org.junit.jupiter.api.Assumptions.assumingThat;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 @Slf4j
-class StudyTest_DisplayName {
+class StudyTestDisplayName {
 
-    @Test
+    @FastTest
     @DisplayName("스터디 만들기 ! @ @ !")
     void create_new_study() {
         Study study = new Study(10);
@@ -36,7 +36,8 @@ class StudyTest_DisplayName {
     }
 
 
-    @Test
+    @SlowTest
+    @Tag("slow")
     void creat_study_throw_exception() {
         Study study = new Study();
         System.out.println("Exception");
@@ -46,6 +47,7 @@ class StudyTest_DisplayName {
 
     @Test
     @DisplayName("시간안에 테스트 성공하는 지")
+    @Tag("fast")
     void in_time_test() {
         // 메서드 종료시까지 해보고 종료
         assertTimeout(Duration.ofMillis(100), () -> {
