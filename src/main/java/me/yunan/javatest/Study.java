@@ -3,7 +3,23 @@ package me.yunan.javatest;
 public class Study {
     private StudyStatus status = StudyStatus.DRAFT;
 
+    public Study(String name, int limit) {
+        this.name = name;
+        this.limit = limit;
+    }
+
+    private String name;
+
     public Study() {
+    }
+
+    @Override
+    public String toString() {
+        return "Study{" +
+                "status=" + status +
+                ", name='" + name + '\'' +
+                ", limit=" + limit +
+                '}';
     }
 
     public Study(int limit) {
@@ -18,6 +34,11 @@ public class Study {
     }
 
     private int limit;
+
+    public Study(StudyStatus status, int limit) {
+        this.status = status;
+        this.limit = limit;
+    }
 
     public StudyStatus getStatus() {
         return status;
