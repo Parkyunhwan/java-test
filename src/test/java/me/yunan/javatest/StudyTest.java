@@ -1,15 +1,20 @@
 package me.yunan.javatest;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@ExtendWith(FindSlowTestExtension.class)
 class StudyTest {
+    int value = 0;
 
     @Test
-    void create() {
+    void create() throws InterruptedException {
+        Thread.sleep(1001L);
         Study study = new Study();
         System.out.println("Create");
+        System.out.println(++value);
         assertNotNull(study);
     }
 
@@ -18,6 +23,7 @@ class StudyTest {
     void create_disabled() {
         Study study = new Study();
         System.out.println("Create");
+        System.out.println(++value);
         assertNotNull(study);
     }
 
