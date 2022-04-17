@@ -1,5 +1,6 @@
 package me.yunan.javatest;
 
+import me.yunan.javatest.domain.Study;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 

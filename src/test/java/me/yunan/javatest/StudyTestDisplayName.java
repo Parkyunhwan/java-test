@@ -1,6 +1,8 @@
 package me.yunan.javatest;
 
 import lombok.extern.slf4j.Slf4j;
+import me.yunan.javatest.domain.Study;
+import me.yunan.javatest.domain.StudyStatus;
 import org.junit.jupiter.api.*;
 
 import java.time.Duration;
@@ -21,12 +23,12 @@ class StudyTestDisplayName {
         System.out.println("Create");
         assertNotNull(study);
 
-        assertAll(
-                () -> assertNotNull(study),
-                () -> assertEquals(StudyStatus.DRAFT, study.getStatus(),
-                        () -> "스터디를 처음 만들면 상태값이 DRAFT여야 한다."),
-                () -> assertTrue(study.getLimit() > 0)
-        );
+//        assertAll(
+//                () -> assertNotNull(study),
+//                () -> assertEquals(StudyStatus.DRAFT, study.getStatus(),
+//                        () -> "스터디를 처음 만들면 상태값이 DRAFT여야 한다."),
+//                () -> assertTrue(study.getLimit() > 0)
+//        );
 
 
 //        assertEquals(StudyStatus.DRAFT, study.getStatus(),
@@ -75,19 +77,19 @@ class StudyTestDisplayName {
         System.out.println(test_env);
         assumeTrue("LOCAL".equalsIgnoreCase(test_env));
 
-        //로컬일때
-        assumingThat("LOCAL".equalsIgnoreCase(test_env), () -> {
-            Study actual = new Study(10);
-            log.info("Local limit : {}", actual.getLimit());
-            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(10);
-        });
-
-        //dev일때
-        assumingThat("DEV".equalsIgnoreCase(test_env), () -> {
-            Study actual = new Study(100);
-            log.info("Dev limit : {}", actual.getLimit());
-            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(100);
-        });
+//        //로컬일때
+//        assumingThat("LOCAL".equalsIgnoreCase(test_env), () -> {
+//            Study actual = new Study(10);
+//            log.info("Local limit : {}", actual.getLimit());
+//            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(10);
+//        });
+//
+//        //dev일때
+//        assumingThat("DEV".equalsIgnoreCase(test_env), () -> {
+//            Study actual = new Study(100);
+//            log.info("Dev limit : {}", actual.getLimit());
+//            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(100);
+//        });
     }
 
     @BeforeAll

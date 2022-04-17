@@ -1,6 +1,7 @@
 package me.yunan.javatest;
 
 import lombok.extern.slf4j.Slf4j;
+import me.yunan.javatest.domain.Study;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.*;
 
@@ -17,19 +18,19 @@ public class EnvAssumeTest {
         System.out.println(test_env);
         assumeTrue("LOCAL".equalsIgnoreCase(test_env));
 
-        //로컬일때
-        assumingThat("LOCAL".equalsIgnoreCase(test_env), () -> {
-            Study actual = new Study(10);
-            log.info("Local limit : {}", actual.getLimit());
-            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(10);
-        });
-
-        //dev일때
-        assumingThat("DEV".equalsIgnoreCase(test_env), () -> {
-            Study actual = new Study(100);
-            log.info("Dev limit : {}", actual.getLimit());
-            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(100);
-        });
+//        //로컬일때
+//        assumingThat("LOCAL".equalsIgnoreCase(test_env), () -> {
+//            Study actual = new Study(10);
+//            log.info("Local limit : {}", actual.getLimit());
+//            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(10);
+//        });
+//
+//        //dev일때
+//        assumingThat("DEV".equalsIgnoreCase(test_env), () -> {
+//            Study actual = new Study(100);
+//            log.info("Dev limit : {}", actual.getLimit());
+//            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(100);
+//        });
     }
 
     @Test
@@ -39,19 +40,19 @@ public class EnvAssumeTest {
         System.out.println(test_env);
         assumeTrue("LOCAL".equalsIgnoreCase(test_env));
 
-        //로컬일때
-        assumingThat("LOCAL".equalsIgnoreCase(test_env), () -> {
-            Study actual = new Study(10);
-            log.info("Local limit : {}", actual.getLimit());
-            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(10);
-        });
-
-        //dev일때
-        assumingThat("DEV".equalsIgnoreCase(test_env), () -> {
-            Study actual = new Study(100);
-            log.info("Dev limit : {}", actual.getLimit());
-            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(100);
-        });
+//        //로컬일때
+//        assumingThat("LOCAL".equalsIgnoreCase(test_env), () -> {
+//            Study actual = new Study(10);
+//            log.info("Local limit : {}", actual.getLimit());
+//            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(10);
+//        });
+//
+//        //dev일때
+//        assumingThat("DEV".equalsIgnoreCase(test_env), () -> {
+//            Study actual = new Study(100);
+//            log.info("Dev limit : {}", actual.getLimit());
+//            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(100);
+//        });
     }
 
     @Test
@@ -61,19 +62,19 @@ public class EnvAssumeTest {
         System.out.println(test_env);
         assumeTrue("LOCAL".equalsIgnoreCase(test_env));
 
-        //로컬일때
-        assumingThat("LOCAL".equalsIgnoreCase(test_env), () -> {
-            Study actual = new Study(10);
-            log.info("Local limit : {}", actual.getLimit());
-            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(10);
-        });
-
-        //dev일때
-        assumingThat("DEV".equalsIgnoreCase(test_env), () -> {
-            Study actual = new Study(100);
-            log.info("Dev limit : {}", actual.getLimit());
-            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(100);
-        });
+//        //로컬일때
+//        assumingThat("LOCAL".equalsIgnoreCase(test_env), () -> {
+//            Study actual = new Study(10);
+//            log.info("Local limit : {}", actual.getLimit());
+//            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(10);
+//        });
+//
+//        //dev일때
+//        assumingThat("DEV".equalsIgnoreCase(test_env), () -> {
+//            Study actual = new Study(100);
+//            log.info("Dev limit : {}", actual.getLimit());
+//            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(100);
+//        });
     }
 
     @Test
@@ -84,18 +85,18 @@ public class EnvAssumeTest {
         assumeTrue("LOCAL".equalsIgnoreCase(test_env));
 
         //로컬일때
-        assumingThat("LOCAL".equalsIgnoreCase(test_env), () -> {
-            Study actual = new Study(10);
-            log.info("Local limit : {}", actual.getLimit());
-            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(10);
-        });
+//        assumingThat("LOCAL".equalsIgnoreCase(test_env), () -> {
+//            Study actual = new Study(10);
+//            log.info("Local limit : {}", actual.getLimit());
+//            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(10);
+//        });
 
         //dev일때
-        assumingThat("DEV".equalsIgnoreCase(test_env), () -> {
-            Study actual = new Study(100);
-            log.info("Dev limit : {}", actual.getLimit());
-            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(100);
-        });
+//        assumingThat("DEV".equalsIgnoreCase(test_env), () -> {
+//            Study actual = new Study(100);
+//            log.info("Dev limit : {}", actual.getLimit());
+//            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(100);
+//        });
     }
 
     /**
@@ -108,18 +109,18 @@ public class EnvAssumeTest {
         System.out.println(test_env);
         assumeTrue("LOCAL".equalsIgnoreCase(test_env));
 
-        //로컬일때
-        assumingThat("LOCAL".equalsIgnoreCase(test_env), () -> {
-            Study actual = new Study(10);
-            log.info("Local limit : {}", actual.getLimit());
-            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(10);
-        });
-
-        //dev일때
-        assumingThat("DEV".equalsIgnoreCase(test_env), () -> {
-            Study actual = new Study(100);
-            log.info("Dev limit : {}", actual.getLimit());
-            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(100);
-        });
+//        //로컬일때
+//        assumingThat("LOCAL".equalsIgnoreCase(test_env), () -> {
+//            Study actual = new Study(10);
+//            log.info("Local limit : {}", actual.getLimit());
+//            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(10);
+//        });
+//
+//        //dev일때
+//        assumingThat("DEV".equalsIgnoreCase(test_env), () -> {
+//            Study actual = new Study(100);
+//            log.info("Dev limit : {}", actual.getLimit());
+//            assertThat(actual.getLimit()).isGreaterThanOrEqualTo(100);
+//        });
     }
 }

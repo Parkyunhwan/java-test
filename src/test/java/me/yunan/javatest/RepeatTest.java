@@ -1,6 +1,6 @@
 package me.yunan.javatest;
 
-import org.junit.jupiter.api.Disabled;
+import me.yunan.javatest.domain.Study;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.RepetitionInfo;
@@ -38,8 +38,8 @@ public class RepeatTest {
     @ParameterizedTest(name = "{index} - {0}, {1}")
     @CsvSource({"10, '자바 스터디'", "20, 스프링"})
     void parameterTest(Integer limit, String name) {
-        Study study = new Study(name, limit);
-        System.out.println(study.toString());
+//        Study study = new Study(name, limit);
+//        System.out.println(study.toString());
     }
 
 
@@ -47,23 +47,23 @@ public class RepeatTest {
     @ParameterizedTest(name = "{index} - {0}, {1}")
     @CsvSource({"10, '자바 스터디'", "20, 스프링"})
     void parameterArgumentAccessorTest(ArgumentsAccessor argumentsAccessor) {
-        Study study = new Study(argumentsAccessor.getString(1), argumentsAccessor.getInteger(0));
-        System.out.println(study.toString());
+//        Study study = new Study(argumentsAccessor.getString(1), argumentsAccessor.getInteger(0));
+//        System.out.println(study.toString());
     }
 
 
-    @DisplayName("여러 파라미터 테스트-Aggregator이용")
-    @ParameterizedTest(name = "{index} - {0}, {1}")
-    @CsvSource({"10, '자바 스터디'", "20, 스프링"})
-    void parameterArgumentAccessorTest(@AggregateWith(StudyAggregator.class) Study study) {
-        System.out.println(study);
-    }
-
-    static class StudyAggregator implements ArgumentsAggregator {
-
-        @Override
-        public Object aggregateArguments(ArgumentsAccessor argumentsAccessor, ParameterContext parameterContext) throws ArgumentsAggregationException {
-            return new Study(argumentsAccessor.getString(1), argumentsAccessor.getInteger(0));
-        }
-    }
+//    @DisplayName("여러 파라미터 테스트-Aggregator이용")
+//    @ParameterizedTest(name = "{index} - {0}, {1}")
+//    @CsvSource({"10, '자바 스터디'", "20, 스프링"})
+//    void parameterArgumentAccessorTest(@AggregateWith(StudyAggregator.class) Study study) {
+//        System.out.println(study);
+//    }
+//
+//    static class StudyAggregator implements ArgumentsAggregator {
+//
+//        @Override
+//        public Object aggregateArguments(ArgumentsAccessor argumentsAccessor, ParameterContext parameterContext) throws ArgumentsAggregationException {
+//            return new Study(argumentsAccessor.getString(1), argumentsAccessor.getInteger(0));
+//        }
+//    }
 }
